@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: twikoo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npx tkserver
+    envVars:
+      - key: MONGODB_URL
+        fromDatabase:
+          name: twikoo-mongo
+          property: connectionString
+      - key: TWIKOO_IP_ENABLED
+        value: "true"
+
+databases:
+  - name: twikoo-mongo
+    plan: free
+    ipAllowList: []
