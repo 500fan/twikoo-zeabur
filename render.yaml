@@ -1,12 +1,12 @@
 services:                                                                        
-    - type: web                                                                    
+    - type: web
       name: twikoo                                                                 
       runtime: node                                                                
       plan: free                                                                   
       buildCommand: npm install                                                    
       startCommand: npx tkserver                                                   
       envVars:                                                                     
-        - key: MONGODB_URL                                                         
+        - key: MONGO_URI                                                           
           sync: false                                                              
         - key: TWIKOO_IP_ENABLED                                                   
           value: "true"
