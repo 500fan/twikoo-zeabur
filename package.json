@@ -1,9 +1,1 @@
-{
-  "scripts": {
-    "build": "cd .",
-    "start": "tkserver"
-  },
-  "dependencies": {
-    "tkserver": "latest"
-  }
-}
+{"name":"twikoo","scripts":{"start":"tkserver"},"dependencies":{"tkserver":"latest"}}
